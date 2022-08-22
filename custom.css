@@ -279,3 +279,6 @@
 .article-pager{
   justify-content: center;
 }
+.index-network{
+  background-image: url('./images/bg_network.png');
+}
