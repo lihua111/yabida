@@ -282,3 +282,6 @@
 .index-network{
   background-image: url('./images/bg_network.png');
 }
+.ml-100{
+  margin-left: 100px;
+}

@@ -107,7 +107,7 @@
 		var li = document.createElement('li')
 		li.className = 'list-blog-popular'
 		var content = '<div class="popular-blog">' +
-			'<h3 class="polular-caption fz-18 text-uppercase darkred">' +
+			'<h3 class="polular-caption fz-18 text-uppercase darkgreen">' +
 			'热门推荐' +
 			'</h3>' +
 			'<ul class="list list-1 list-popular mt-20">' +
