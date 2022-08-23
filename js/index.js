@@ -68,6 +68,19 @@
     ulNode.appendChild(li)
   }
   function createBlogCardLi(data) {
+    var moreText = '更多'
+    var curLanguage = '中文'
+    if (document.getElementsByClassName('ontrue').length) {
+      curLanguage = document.getElementsByClassName('ontrue')[0].innerText
+    }
+    switch (curLanguage) {
+      case 'EN':
+        moreText = "more"
+        break
+      case 'RU':
+        moreText = "Более"
+        break
+    }
     var content = '<a href="./blog-detail.html?id=' + data.id + '" target="_blank" class="blog-item">' +
       '<div class="blog-item__img img-box">' +
       '<img src="' +
@@ -82,7 +95,7 @@
       data.title +
       '</h3>' +
       '<div class="btn-more mt-30">' +
-      '<span class="txt">更多</span>' +
+      '<span class="txt">'++'</span>' +
       '<span class="ico icon-go"></span>' +
       '</div>' +
       '</div>' +
