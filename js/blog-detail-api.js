@@ -2,12 +2,29 @@
 	if (jQuery == undefined || jQuery == null)
 		throw "don't import jquery"
 	var blogApiUrl = "http://139.155.90.110:8080"
+	var curLanguage = '中文'
 	//---------- API----------	
 	function GetBlogNew(id, cbk) {
 		if (!cbk)
 			return
+		var url = blogApiUrl
+
+		if (document.getElementsByClassName('ontrue').length) {
+			curLanguage = document.getElementsByClassName('ontrue')[0].innerText
+		} 
+		switch (curLanguage) {
+			case 'EN':
+				url += "/api/news_en/"
+				break
+			case 'RU':
+				url += "/api/news_ru/"
+				break
+			default:
+				url += "/api/news_zh/"
+				break
+		}
 		jQuery.ajax({
-			url: blogApiUrl + "/api/news_zh/" + id + "/", contentType: "application/json", type: "get", success: function (e) {
+			url: url + id + "/", contentType: "application/json", type: "get", success: function (e) {
 				if (e.code === 200 || e.code === 2000) {
 					if (e.data) {
 						cbk(e.data)

@@ -8,6 +8,7 @@
 	var pageSize = 6
 	var pageMode = 0	//0:全部，1：企业新闻，2：公告
 	var keyword = ''	//关键字搜索
+	var curLanguage = '中文'
 	function createQueryParams() {
 		var str = "limit=" + pageSize
 		str += ("&page=" + (currentPage + 1))
@@ -22,7 +23,24 @@
 	function GetBlogNews(cbk) {
 		if (!cbk)
 			return
-		var url = blogApiUrl + "/api/news_zh/?" + createQueryParams()
+		var url = blogApiUrl;
+
+		if (document.getElementsByClassName('ontrue').length) {
+			curLanguage = document.getElementsByClassName('ontrue')[0].innerText
+		} 
+		switch (curLanguage) {
+			case 'EN':
+				url += "/api/news_en/?"
+				break
+			case 'RU':
+				url += "/api/news_ru/?"
+				break
+			default:
+				url += "/api/news_zh/?"
+				break
+		}
+		url += createQueryParams()
+		// var url = blogApiUrl + "/api/news_zh/?" + createQueryParams()
 		jQuery.ajax({
 			url: url, contentType: "application/json", type: "get", success: function (e) {
 				if (e.code === 200 || e.code === 2000) {
@@ -57,6 +75,7 @@
 		blogTopImg.src = blogImgUrl + "/" + data.cover  //设置图片
 		var topBox = blogTopImgDiv.parentElement	//<a>
 		topBox.href = "./blog-detail.html?id=" + data.id
+		topBox.style.display = "block"
 		var blogIntroDiv = topBox.children[1]  //简介div
 		blogIntroDiv.firstElementChild.innerText = data.release_date
 		blogIntroDiv.children[1].innerText = data.title
@@ -79,6 +98,15 @@
 		ulNode.appendChild(li)
 	}
 	function createBlogCardLi(data) {
+		var moreText = '更多'
+		switch (curLanguage) {
+			case 'EN':
+				moreText = "more"
+				break
+			case 'RU':
+				moreText = "Более"
+				break
+		}
 		var content = '<a href="./blog-detail.html?id=' + data.id + '" target="_blank" class="blog-item">' +
 			'<div class="blog-item__img img-box">' +
 			'<img src="' +
@@ -93,7 +121,7 @@
 			data.title +
 			'</h3>' +
 			'<div class="btn-more mt-30">' +
-			'<span class="txt">更多</span>' +
+			'<span class="txt">' + moreText + '</span>' +
 			'<span class="ico icon-go"></span>' +
 			'</div>' +
 			'</div>' +
@@ -104,11 +132,20 @@
 	}
 
 	function createHotBlogCardUl() {
+		var recommendText = '	'
+		switch (curLanguage) {
+			case 'EN':
+				recommendText = "morPopular recommendatione"
+				break
+			case 'RU':
+				recommendText = "Популярная рекомендация"
+				break
+		}
 		var li = document.createElement('li')
 		li.className = 'list-blog-popular'
 		var content = '<div class="popular-blog">' +
 			'<h3 class="polular-caption fz-18 text-uppercase darkgreen">' +
-			'热门推荐' +
+			recommendText +
 			'</h3>' +
 			'<ul class="list list-1 list-popular mt-20">' +
 

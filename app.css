@@ -911,7 +911,7 @@ strong {
 }
 
 .wrap {
-  max-width: 1260px;
+  max-width: 1360px;
   margin-right: auto;
   margin-left: auto
 }
@@ -965,9 +965,9 @@ strong {
 }
 
 .header-menu {
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  right: 0
+  right: 100px; */
 }
 
 .hm-item {

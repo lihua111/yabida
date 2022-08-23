@@ -22,7 +22,23 @@
   function GetBlogNews(cbk) {
     if (!cbk)
       return
-    var url = blogApiUrl + "/api/news_zh/?" + createQueryParams()
+    var url = blogApiUrl
+    var curLanguage = '中文'
+    if (document.getElementsByClassName('ontrue').length) {
+      curLanguage = document.getElementsByClassName('ontrue')[0].innerText
+    }
+    switch (curLanguage) {
+      case 'EN':
+        url += "/api/news_en/?"
+        break
+      case 'RU':
+        url += "/api/news_ru/?"
+        break
+      default:
+        url += "/api/news_zh/?"
+        break
+    }
+    // var url = blogApiUrl + "/api/news_zh/?" + createQueryParams()
     jQuery.ajax({
       url: url, contentType: "application/json", type: "get", success: function (e) {
         if (e.code === 200 || e.code === 2000) {
