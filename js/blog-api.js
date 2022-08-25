@@ -70,11 +70,22 @@
 			console.error("Can't find blog-top__img element!")
 			return
 		}
+		var page = ''
+		switch (curLanguage) {
+			case 'EN':
+				page = "-en"
+				break
+			case 'RU':
+				page = '-ru'
+				break
+			default:
+				break
+		}
 		var blogTopImgDiv = blogTopImgLst[0]
 		var blogTopImg = blogTopImgDiv.firstElementChild
 		blogTopImg.src = blogImgUrl + "/" + data.cover  //设置图片
 		var topBox = blogTopImgDiv.parentElement	//<a>
-		topBox.href = "./blog-detail.html?id=" + data.id
+		topBox.href = "./blog-detail"+page+".html?id=" + data.id
 		topBox.style.display = "block"
 		var blogIntroDiv = topBox.children[1]  //简介div
 		blogIntroDiv.firstElementChild.innerText = data.release_date
@@ -99,15 +110,18 @@
 	}
 	function createBlogCardLi(data) {
 		var moreText = '更多'
+		var page = 'blog-detail.html'
 		switch (curLanguage) {
 			case 'EN':
 				moreText = "more"
+				page = 'blog-detail-en.html'
 				break
 			case 'RU':
 				moreText = "Более"
+				page = 'blog-detail-ru.html'
 				break
 		}
-		var content = '<a href="./blog-detail.html?id=' + data.id + '" target="_blank" class="blog-item">' +
+		var content = '<a href="./'+page+'?id=' + data.id + '" target="_blank" class="blog-item">' +
 			'<div class="blog-item__img img-box">' +
 			'<img src="' +
 			blogImgUrl + "/" + data.cover +
@@ -156,8 +170,17 @@
 	}
 
 	function createHotBlogCardLi(data) {
+		var page = 'blog-detail.html'
+		switch (curLanguage) {
+			case 'EN':
+				page = 'blog-detail-en.html'
+				break
+			case 'RU':
+				page = 'blog-detail-ru.html'
+				break
+		}
 		var content = ' <li>' +
-			' <a href="./blog-detail.html?id=' + data.id + '" target="_blank" class="related-item">' +
+			' <a href="./'+page+'?id=' + data.id + '" target="_blank" class="related-item">' +
 			'  <div class="related-item__img img-box">' +
 			'   <img src="' +
 			blogImgUrl + "/" + data.cover +

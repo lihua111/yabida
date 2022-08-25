@@ -95,7 +95,7 @@
       data.title +
       '</h3>' +
       '<div class="btn-more mt-30">' +
-      '<span class="txt">'++'</span>' +
+      '<span class="txt">'+moreText+'</span>' +
       '<span class="ico icon-go"></span>' +
       '</div>' +
       '</div>' +

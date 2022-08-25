@@ -180,10 +180,6 @@
                                         fill: #fff;
                                     }
 
-                                    .cls-2 {
-                                        opacity: 0.3;
-                                    }
-
                                     .cls-4,
                                     .cls-5,
                                     .cls-6 {
@@ -206,9 +202,6 @@
                                         stroke-width: 0.5px;
                                     }
 
-                                    .cls-7 {
-                                        fill: #87ffff;
-                                    }
                                 </style>
                             </defs>
                             <g id="point">
@@ -216,83 +209,61 @@
                                     <text class="cls-1" transform="translate(646,328)">俄罗斯</text>
                                     <circle id="c1" class="cls-2" cx="646" cy="308" r="5.97">
                                     </circle>
-                                    <circle id="c1" class="cls-3" cx="646" cy="308" r="5.97">
                                 </g>
                                 <g id="cn">
                                     <text class="cls-1" transform="translate(778 481)">中国</text>
-                                    <circle id="c1" class="cls-2" cx="782" cy="461" r="5.97">
-                                    </circle>
                                     <circle id="c1-2" data-name="c1" class="cls-3" cx="782" cy="461" r="5.97">
                                 </g>
                                 <g id="kaz">
                                     <text class="cls-1" transform="translate(486,390)">哈萨克斯坦</text>
-                                    <circle id="c1" class="cls-2" cx="516" cy="370" r="5.97">
-                                    </circle>
                                     <circle id="c1-3" data-name="c1" class="cls-3" cx="516" cy="370" r="5.97">
                                 </g>
-                                <g id="mc">
-                                    <text class="cls-1" transform="translate(352,282)">莫斯科</text>
-                                    <circle id="c1" class="cls-2" cx="352" cy="302" r="5.97">
-                                    </circle>
-                                    <circle id="c1-4" data-name="c1" class="cls-3" cx="352" cy="302" r="5.97" />
-                                </g>
                                 <g id="spb">
-                                    <text class="cls-1" transform="translate(392,334)">圣彼得堡</text>
-                                    <circle id="c1" class="cls-2" cx="392" cy="314" r="5.97">
-                                    </circle>
+                                    <text class="cls-1" transform="translate(392,334)">莫斯科</text>
                                     <circle id="c1-4" data-name="c1" class="cls-3" cx="392" cy="314" r="5.97" />
+                                </g>
+                                <g id="mc">
+                                    <text class="cls-1" transform="translate(352,282)">圣彼得堡</text>
+                                    
+                                    <circle id="c1-4" data-name="c1" class="cls-3" cx="352" cy="302" r="5.97" />
                                 </g>
                                 <g id="mhp">
                                     <text class="cls-1" transform="translate(294,342)">明斯克</text>
-                                    <circle id="c1" class="cls-2" cx="294" cy="322" r="5.97">
-                                    </circle>
+                                   
                                     <circle id="c1-5" data-name="c1" class="cls-3" cx="294" cy="322" r="5.97" />
                                 </g>
                                 <g id="au">
                                     <text class="cls-1" transform="translate(246, 334)">欧盟</text>
-                                    <circle id="c1" class="cls-2" cx="246" cy="314" r="5.97">
-                                    </circle>
                                     <circle id="c1-6" data-name="c1" class="cls-3" cx="246" cy="314" r="5.97" />
                                 </g>
 
                             </g>
                             <g id="line">
                                 <!-- 中国-俄罗斯 -->
-                                <path id="asean-2" data-name="asean" class="cls-4"
-                                    d="M782 461 C 616,288 655, 296 645,308" />
-                                <!--俄罗斯-哈萨克斯坦 -->
-                                <path id="ca-2" data-name="ca" class="cls-4" d="M782, 461 C680,410, 600,453 516,370" />
-                                <!-- 哈萨克斯坦-圣彼得堡 -->
-                                <path id="za-2" data-name="za" class="cls-4" d="M516,370 C552,382 344,338 392,314" />
-                                <!--<path id="br-2" data-name="br" class="cls-4"
-                                    d="M915.18,303.75C772.1,466.93,584.72,508.4,366,461.26" />
-                                <path id="mx-2" data-name="mx" class="cls-4"
-                                    d="M911.76,302.55c-91.51,48.38-373.45,114-736.82,48.35" />
-                                <path id="us-2" data-name="us" class="cls-4"
-                                    d="M918.31,299.91C643.72,340.52,406.67,324.4,201.82,272" />
-                                <path id="jp-2" data-name="jp" class="cls-5"
-                                    d="M915,301.58c63.36,13,98.55,3.23,116.33-13.33" />
-                                <path id="au-2" data-name="au" class="cls-6"
-                                    d="M563.48,202.23c463.38-26.76,473.3,198.37,460.07,311" />
-                                <path id="us2" class="cls-6"
-                                    d="M914.1,301.49c-187.36-103.93-499.89-145.6-709.83-30.78" /> -->
+                                <path id="asean-2" data-name="ch" class="cls-4" d="M782,461 Q 727,341 645,308" />
+                                <!--中国-哈萨克斯坦 -->
+                                <path id="ca-2" data-name="ca" class="cls-4" d="M782,461 Q 575,427 516,370" />
+                                <!-- 哈萨克斯坦-莫斯科 -->
+                                <path id="za-2" data-name="za" class="cls-4" d="M516,370 Q 490,323 392,314" />
+                                <!-- 莫斯科-圣彼得堡 -->
+                                <path id="br-2" data-name="br" class="cls-4" d="M392,314 Q 373,311 352,302" />
+                                <!-- 圣彼得堡-明斯克 -->
+                                <path id="mx-2" data-name="mx" class="cls-4" d="M352,302 Q 324,266 294,322" />
+                                <!-- 圣彼得堡-欧盟 -->
+                                <path id="us-2" data-name="us" class="cls-4" d="M294,322 Q 283,341 246,314" />
+
                             </g>
 
-                            <image id="plane1" href="./images/car.svg" height="28" width="28"
-                                transform="translate(-6.5, -6)" />
-                            <image id="plane2" href="./images/car.svg" height="28" width="28"
-                                transform="translate(-8.5, -8)" />
-                            <image id="plane3" href="./images/car.svg" height="28" width="28"
-                                transform="translate(-8.5, -8)" />
-                            <!--中国俄罗斯 -->
-                            <animateMotion xlink:href="#plane1" dur="3.6s" rotate="auto-reverse"
-                                repeatCount="indefinite" fill="freeze" path="M782 461 C 616,288 655, 296 645,308" />
-                            <!-- 中国哈萨克斯坦 -->
-                            <animateMotion xlink:href="#plane2" dur="3.6s" rotate="auto-reverse"
-                                repeatCount="indefinite" fill="freeze" path="M782, 461 C680,410, 600,453 516,370" />
-                            <!-- 哈萨克斯坦-圣彼得堡 -->
-                            <animateMotion xlink:href="#plane3" dur="3.6s" rotate="auto-reverse"
-                                repeatCount="indefinite" fill="freeze" path="M516,370 C552,382 344,338 392,314" />
+                            <image id="car1" href="./images/car.svg" height="28" width="28"
+                                transform="translate(-14, -14)" />
+                            <image id="car2" href="./images/car.svg" height="28" width="28"
+                                transform="translate(-14, -14)" />
+                            <!--中国 - 俄罗斯 -->
+                            <animateMotion xlink:href="#car1" dur="3.6s" rotate="auto-reverse"
+                                repeatCount="indefinite" fill="freeze" path="M782 461 Q 727,341 645,308" />
+                            <!-- 中国- 哈萨克斯坦 -莫斯科 -圣彼得堡 -明斯克 -欧盟 -->
+                            <animateMotion xlink:href="#car2" dur="6s" rotate="auto-reverse"
+                                repeatCount="indefinite" fill="freeze" path="M782, 461 Q575,427  516,370 Q490, 323 392,314 Q 373,311 352,302 Q 324,266 294,322 Q 283,341 246,314 " />
                         </svg>
                     </div>
                 </div>
@@ -632,9 +603,6 @@
     gtag('js', new Date())
 
     gtag('config', 'G-4W9Q5E4DBW')
-    document.getElementById('changeLanguage').onclick = function () {
-        translate()
-    }
 </script>
 
 </html>

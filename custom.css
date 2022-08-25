@@ -335,9 +335,11 @@
   opacity: 0;
   transition: all .4s ease;
 }
+.page-menu .header-lang a,
 .fixed-menu .header-lang a {
   color: #014d4e;
 }
+.page-menu .header-lang a::after,
 .fixed-menu .header-lang a::after{
   border-top-color: #014d4e;
 }
@@ -359,4 +361,14 @@
 .header-inner {
   display: flex;
   justify-content: space-between;
+}
+.icon-go:before{
+  content: ''!important;
+  background-image: url(./images/car.svg);
+  background-size: 100% 100%;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
