@@ -69,19 +69,22 @@
   }
   function createBlogCardLi(data) {
     var moreText = '更多'
-    var curLanguage = '中文'
+    var curLanguage = '中文';
+    var page = ''
     if (document.getElementsByClassName('ontrue').length) {
       curLanguage = document.getElementsByClassName('ontrue')[0].innerText
     }
     switch (curLanguage) {
       case 'EN':
         moreText = "more"
+        page = '-en'
         break
       case 'RU':
         moreText = "Более"
+        page = '-ru'
         break
     }
-    var content = '<a href="./blog-detail.html?id=' + data.id + '" target="_blank" class="blog-item">' +
+    var content = '<a href="./blog-detail'+page+'.html?id=' + data.id + '" target="_blank" class="blog-item">' +
       '<div class="blog-item__img img-box">' +
       '<img src="' +
       blogImgUrl + "/" + data.cover +

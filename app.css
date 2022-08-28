@@ -1509,7 +1509,6 @@ strong {
   margin-left: -1px;
   background-repeat: repeat-y;
   background-position: top center;
-  background-image: url(../upload/index/bg_gotop.png);
   -webkit-transition: height .75s ease-out;
   -o-transition: height .75s ease-out;
   transition: height .75s ease-out
@@ -1522,7 +1521,6 @@ strong {
   left: 0;
   height: 28px;
   margin-bottom: -14px;
-  background-image: url(../upload/index/gotop.png);
   background-repeat: no-repeat;
   cursor: pointer;
   -webkit-transition: bottom .75s ease-out;
@@ -2440,7 +2438,6 @@ strong {
   left: 0;
   right: 0;
   height: 2px;
-  /* background: repeat-x url(../upload/index/dot_line.png) top left */
 }
 
 .ic-header::after {
@@ -2835,7 +2832,6 @@ strong {
   font-size: 20px;
   line-height: 52px;
   color: #fff;
-  /* background-image: url(../upload/index/id_arrow_bg.png); */
   cursor: pointer;
   padding: 0;
   background-color: rgba(0, 0, 0, 0.1);
@@ -4058,7 +4054,6 @@ div.wpforms-container-full .wpforms-form .wpforms-submit.btn-submit:hover {
   right: 0;
   bottom: 0;
   left: 0;
-  background: no-repeat url(../upload/page/bg_service.png) center center;
   background-size: contain
 }
 

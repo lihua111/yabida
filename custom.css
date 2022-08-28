@@ -73,6 +73,7 @@
   height: 570px;
 }
 
+
 .transform-txt {
   width: 360px;
   height: 200px;
@@ -84,7 +85,42 @@
   align-items: center;
   justify-content: center;
 }
-
+.standard-img {
+  width: 370px;
+  height: 192px;
+}
+.standard-txt{
+  width: 370px;
+  height: 200px;
+  font-size: 24px;
+  background-color: #212121;
+  color: #848586;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ru .standard-txt{
+  height: 240px;
+}
+.standard-txt p{
+  text-align: center;
+}
+.figure-img{
+  width: 570px;
+  height: 357px;
+}
+.figure-txt{
+  width: 570px;
+  height: 200px;
+  font-size: 24px;
+  background-color: #212121;
+  color: #848586;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .w-1000 {
   max-width: 1000px;
   margin-right: auto;
