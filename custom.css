@@ -408,3 +408,18 @@
   right: 0;
   top: 0;
 }
+div.wpforms-container-full .wpforms-form .wpforms-submit.btn-submit{
+  width: 100px;
+  position: relative;
+  text-align: left;
+}
+div.wpforms-container-full .wpforms-form .wpforms-submit.btn-submit::after{
+  content: ''!important;
+  background-image: url(./images/car.svg);
+  background-size: 100% 100%;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}

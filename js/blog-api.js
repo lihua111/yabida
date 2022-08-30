@@ -51,6 +51,9 @@
 					else if (pageMode === 2) {
 						e.data.data = e.data.data.filter(r => { return r.label == 1 })
 					}
+					if(pageSize * currentPage >= e.data.total && document.getElementById('blogPageMoreBt')){
+						document.getElementById('blogPageMoreBt').style.display = 'none'
+					}
 					cbk(e.data)
 					return
 				}
